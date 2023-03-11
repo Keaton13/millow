@@ -83,6 +83,7 @@ contract Escrow {
     // -> Require funds to be correct amount
     // -> Transfer NFT to Buyer
     // -> Transfer Funds to Seller
+    
     function finalizeSale(uint256 _nftID) public {
         require(inspectionPassed[_nftID]);
         require(approval[_nftID][buyer[_nftID]]);
